@@ -287,6 +287,8 @@ footer { background:#0a0b0b;padding:74px 0 30px; }
   .hero-proof { grid-template-columns:repeat(3,1fr); }
   .hero-proof-link { grid-column:1/-1;padding:16px 0;border-top:1px solid var(--line); }
   .services-intro,.work-head,.contact-head { grid-template-columns:1fr;gap:32px;align-items:start; }
+  .contact-meta { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .contact-meta>.payment-methods { grid-column:1/-1; }
   .services-intro>p,.work-head p,.contact-head p { max-width:560px; }
   .about-layout { grid-template-columns:1fr;align-items:start; }
   .about-facts { max-width:760px; }
