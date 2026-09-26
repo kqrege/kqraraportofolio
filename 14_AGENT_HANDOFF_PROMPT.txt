@@ -1,0 +1,5 @@
+Read this ZIP as the complete build brief for my portfolio. Start with `00_READ_ME_FIRST.md`, then read the rest of the top-level plan files before coding. Use `reference/scroll-film-studio/` as a motion/art-direction reference, especially its Lane A pure-code ideas, but follow this portfolio brief over the generic skill whenever they differ.
+
+Build the actual site in my current project. Do not give me another plan. Do not ask me to repeat decisions that are already in the ZIP. Do not invent projects, testimonials, clients, prices, metrics, or personal info. If real project/testimonial content is still empty, build those components and hide the public sections until real data is added.
+
+After building, run the production build, fix errors, inspect desktop and mobile, and verify the interactions in `12_QA_ACCEPTANCE_CHECKLIST.md`.
