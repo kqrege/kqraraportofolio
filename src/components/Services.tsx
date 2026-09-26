@@ -13,14 +13,17 @@ export function Services() {
         </div>
 
         <div className="engagement-list" aria-label="Ways to hire kq">
-          {engagements.map((item) => (
-            <a className="engagement-row reveal-row" href="#contact" key={item.n}>
-              <span className="engagement-num">{item.n}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-              <ArrowUpRight size={22} aria-hidden="true" />
-            </a>
-          ))}
+          {engagements.map((item) => {
+            const copy = item.emphasis ? item.body.split(item.emphasis) : undefined;
+            return (
+              <a className="engagement-row reveal-row" href="#contact" key={item.n}>
+                <span className="engagement-num">{item.n}</span>
+                <h3>{item.title}</h3>
+                <p>{copy ? <>{copy[0]}<strong>{item.emphasis}</strong>{copy[1]}</> : item.body}</p>
+                <ArrowUpRight size={22} aria-hidden="true" />
+              </a>
+            );
+          })}
         </div>
 
         <div className="capability-block reveal-row">

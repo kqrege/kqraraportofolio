@@ -1,6 +1,10 @@
-import { ArrowUpRight, Check, Copy } from "lucide-react";
+import { ArrowUpRight, Check, Coins, Copy } from "lucide-react";
 import { payments, profile } from "../data";
 import { useCopy } from "../hooks";
+
+const robloxIcon = new URL("../assets/brands/roblox.svg", import.meta.url).href;
+const paypalIcon = new URL("../assets/brands/paypal.svg", import.meta.url).href;
+const litecoinIcon = new URL("../assets/brands/litecoin.svg", import.meta.url).href;
 
 export function Contact() {
   const { copied, copy } = useCopy();
@@ -24,7 +28,22 @@ export function Contact() {
           <a href={profile.telegram} target="_blank" rel="noopener noreferrer">
             <span>Telegram</span><strong>waitinglyingonyourside</strong><ArrowUpRight size={18} aria-hidden="true" />
           </a>
-          <div><span>Payment</span><strong>{payments.join(" / ")}</strong></div>
+          <a className="roblox-profile" href={profile.robloxProfileUrl} target="_blank" rel="noopener noreferrer">
+            <img src={robloxIcon} alt="" />
+            <strong>Roblox profile</strong>
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+          <div className="payment-methods">
+            <span>Payment</span>
+            <div className="payment-options">
+              {payments.map(({ label, icon }) => (
+                <span className="payment-option" key={icon}>
+                  {icon === "robux" ? <Coins aria-hidden="true" /> : <img src={icon === "paypal" ? paypalIcon : litecoinIcon} alt="" />}
+                  <span>{label}</span>
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

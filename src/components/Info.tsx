@@ -30,7 +30,7 @@ export function About() {
         <div className="about-layout">
           <div className="about-story">
             <h2 id="about-title" className="section-lead">Just the part<br /><em>I'm actually good at.</em></h2>
-            <p className="about-intro">I'm kq, a Roblox scripter from Romania. I take small commissions, full systems, and longer development work.</p>
+            <p className="about-intro">I'm kq, a <strong>Roblox scripter</strong> from Romania. I take small commissions, full systems, and longer development work.</p>
             <div className="about-copy">
               <p>If you already know exactly what you want, send the spec. If you only know what the feature should do, I can help work out the logic before building it.</p>
               <p>The portfolio stays focused on scripting. I don't claim UI, GFX, VFX or SFX work that wasn't mine.</p>

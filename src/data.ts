@@ -29,9 +29,14 @@ export const profile = {
   experience: "~1.5 years",
   discord: "@kqrara",
   telegram: "https://t.me/waitinglyingonyourside",
+  robloxProfileUrl: "https://www.roblox.com/users/3821489932/profile",
 };
 
-export const payments = ["Robux", "PayPal", "Crypto (LTC preferred)"];
+export const payments = [
+  { label: "Robux", icon: "robux" },
+  { label: "PayPal", icon: "paypal" },
+  { label: "Crypto (LTC preferred)", icon: "litecoin" },
+] as const;
 
 export const serviceGroups = [
   { name: "Systems", items: ["Full systems", "Inventories", "Round systems", "Procedural systems"] },
@@ -43,9 +48,9 @@ export const serviceGroups = [
 
 export const engagements = [
   { n: "01", title: "One task", body: "A bug, one feature, UI logic, or something specific you need done." },
-  { n: "02", title: "Full system", body: "A complete Roblox system built, connected and ready to use in your game." },
+  { n: "02", title: "Full system", body: "A complete Roblox system built, connected and ready to use in your game.", emphasis: "Roblox system" },
   { n: "03", title: "Ongoing", body: "Hourly, daily, weekly, or longer-term scripting when you need another developer around." },
-];
+] satisfies Array<{ n: string; title: string; body: string; emphasis?: string }>;
 
 export const capabilities = [
   "Full systems", "Inventories", "Data saving", "Shops / monetization", "Admin systems",
