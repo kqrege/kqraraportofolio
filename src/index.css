@@ -244,7 +244,8 @@ img { display: block; max-width: 100%; }
 
 /* CONTACT */
 .contact { background:#0a0b0b;overflow:hidden;padding-bottom:88px; }
-.contact-head { display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.32fr);gap:70px;align-items:end;margin:clamp(90px,9vw,145px) 0 clamp(76px,8vw,118px); }
+.contact.section-pad { padding-top:clamp(48px,6vw,96px); }
+.contact-head { display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.32fr);gap:70px;align-items:end;margin:clamp(48px,5vw,80px) 0 clamp(44px,5vw,72px); }
 .contact-head h2 { font-size:clamp(82px,10vw,160px); }
 .contact-head p { margin:0 0 12px;color:var(--muted);max-width:390px;font-size:15px; }
 .discord-line { width:100%;display:grid;grid-template-columns:minmax(150px,.2fr) 1fr auto;align-items:center;gap:30px;min-height:clamp(155px,15vw,220px);padding:0;border:0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);background:none;color:var(--ink);text-align:left;cursor:pointer; }
