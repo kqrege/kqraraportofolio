@@ -283,14 +283,18 @@ footer { background:#0a0b0b;padding:74px 0 30px; }
 /* MICRO-INTERACTIONS */
 @media (prefers-reduced-motion: no-preference) {
   .site :is(a[href],button:not(:disabled),summary) {
-    transition:transform .18s cubic-bezier(.2,.7,.15,1),color .18s ease,background-color .18s ease,border-color .18s ease,opacity .18s ease,filter .18s ease;
+    transition:transform .22s cubic-bezier(.2,.7,.15,1),color .18s ease,background-color .18s ease,border-color .18s ease,opacity .18s ease,filter .18s ease;
   }
 }
 @media (hover:hover) and (prefers-reduced-motion: no-preference) {
-  .site :is(a[href],button:not(:disabled),summary):hover { transform:translateY(-1px) scale(1.005);filter:brightness(1.06); }
+  .site :is(a[href],button:not(:disabled),summary):hover { transform:translateY(-2px);filter:brightness(1.1); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .site :is(a[href],button:not(:disabled),summary):active { transform:scale(.985); }
+  .site :is(a[href],button:not(:disabled),summary):active { transform:scale(.985);filter:brightness(.94); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site :is(a[href],button:not(:disabled),summary):hover { filter:brightness(1.12); }
+  .site :is(a[href],button:not(:disabled),summary):active { filter:brightness(.92); }
 }
 
 @media (max-width: 1050px) {
