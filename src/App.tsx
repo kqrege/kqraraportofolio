@@ -57,7 +57,7 @@ export default function App() {
       event.preventDefault();
       history.pushState(null, "", href);
       lenis.scrollTo(target as HTMLElement, {
-        offset: target.id === "contact" ? 18 : -76,
+        offset: target.id === "contact" || target.id === "services" ? 18 : -76,
         duration: reduced ? 0.45 : 1.15,
         easing: anchorEase,
         lock: false,
